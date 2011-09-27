@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Language:</b>
+  <%= @content_translation.language_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @content_translation.content_id %>
+</p>
+
+<p>
+  <b>Field name:</b>
+  <%= @content_translation.field_name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @content_translation.content %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @content_translation.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_translation_path(@content_translation) %> |
+<%= link_to 'Back', content_translations_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  language_id: 1
+  content_id: 1
+  field_name: MyString
+  content: MyText
+  status: false
+
+two:
+  language_id: 1
+  content_id: 1
+  field_name: MyString
+  content: MyText
+  status: false

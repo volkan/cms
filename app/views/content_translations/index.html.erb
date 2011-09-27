@@ -1,0 +1,31 @@
+<h1>Listing content_translations</h1>
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>Content</th>
+    <th>Field name</th>
+    <th>Content</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @content_translations.each do |content_translation| %>
+  <tr>
+    <td><%= content_translation.language_id %></td>
+    <td><%= content_translation.content_id %></td>
+    <td><%= content_translation.field_name %></td>
+    <td><%= content_translation.content %></td>
+    <td><%= content_translation.status %></td>
+    <td><%= link_to 'Show', content_translation %></td>
+    <td><%= link_to 'Edit', edit_content_translation_path(content_translation) %></td>
+    <td><%= link_to 'Destroy', content_translation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Content translation', new_content_translation_path %>

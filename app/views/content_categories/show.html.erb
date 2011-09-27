@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @content_category.title %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @content_category.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_category_path(@content_category) %> |
+<%= link_to 'Back', content_categories_path %>

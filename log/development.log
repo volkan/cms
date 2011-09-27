@@ -1,0 +1,40 @@
+  [1m[36m (97.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (234.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateContents (20110927175409)
+  [1m[35m (144.0ms)[0m  CREATE TABLE `contents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `site_id` int(11), `parent_id` int(11), `category_id` int(11), `title` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927175409')[0m
+Migrating to CreateContentCategories (20110927175416)
+  [1m[35m (215.6ms)[0m  CREATE TABLE `content_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `status` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927175416')[0m
+Migrating to CreateSites (20110927175424)
+  [1m[35m (146.9ms)[0m  CREATE TABLE `sites` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11), `title` varchar(255), `url` varchar(255), `folder_name` varchar(255), `host_name` varchar(255), `status` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927175424')[0m
+Migrating to CreateLanguages (20110927175430)
+  [1m[35m (143.7ms)[0m  CREATE TABLE `languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927175430')[0m
+Migrating to CreateContentTranslations (20110927175449)
+  [1m[35m (125.9ms)[0m  CREATE TABLE `content_translations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `language_id` int(11), `content_id` int(11), `field_name` varchar(255), `content` text, `status` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927175449')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-09-27 20:58:16 +0300
+Served asset /rails.png - 200 OK (4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateContents (20110927175409)
+Migrating to CreateContentCategories (20110927175416)
+Migrating to CreateSites (20110927175424)
+Migrating to CreateLanguages (20110927175430)
+Migrating to CreateContentTranslations (20110927175449)
+Migrating to AlterContent (20110927190821)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateContents (20110927175409)
+Migrating to CreateContentCategories (20110927175416)
+Migrating to CreateSites (20110927175424)
+Migrating to CreateLanguages (20110927175430)
+Migrating to CreateContentTranslations (20110927175449)
+Migrating to AlterContent (20110927190821)
+  [1m[35m (80.5ms)[0m  ALTER TABLE `contents` ADD `status` tinyint(1)
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927190821')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
